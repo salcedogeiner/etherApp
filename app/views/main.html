@@ -1,0 +1,35 @@
+<div class="panel panel-info" ng-controller="MainCtrl">
+  <div class="panel-body">
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#"><h2 class="panel-title">Upload</h2></a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+      </ul>
+    <div class="panel panel-body">
+        <fieldset>
+            <label >CSV File:</label>
+              <input  class="btn" type="file" accept=".csv" file-reader="fileContent" />
+          </fieldset>
+          <section ng-show="fileContent">
+            <table class="table table-bordered">
+              <tr>
+                    <th ng-repeat="dat in data[0] track by $index">{{dat}}</th>
+                    <th>Up</th>
+              </tr>
+              <tr ng-repeat="raw in data.slice(1,-1) track by $index">
+                <td ng-repeat="dat in raw track by $index">{{dat}}</td>
+                <td><button class="btn btn-info" ng-click="subirRegistro(raw)">Up</button></td>
+              </tr>
+            </table>
+
+            <fieldset>
+                <label>Up all:</label>
+                  <input class="btn btn-success" type="button" value="Up" />
+              </fieldset>
+
+          </section>
+    </div>
+
+
+  </div>
+</div>
