@@ -39,5 +39,8 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js"
+  },
+  "dependencies": {
+    "web3": "^0.20.6"
   }
 }

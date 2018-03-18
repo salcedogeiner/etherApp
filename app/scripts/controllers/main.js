@@ -22,6 +22,8 @@ angular.module('etherAppApp')
       console.log(raw);
     };
 
+
+
     $scope.$watch('fileContent', function(){
       $scope.transformData();
     },true);
