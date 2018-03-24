@@ -8,7 +8,7 @@
  * Controller of the etherAppApp
  */
 angular.module('etherAppApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope,web3service) {
     $scope.fileContent="";
     $scope.data=[];
     $scope.transformData=function(){
@@ -19,6 +19,7 @@ angular.module('etherAppApp')
     };
 
     $scope.subirRegistro=function(raw){
+      web3service.get();
       console.log(raw);
     };
 
