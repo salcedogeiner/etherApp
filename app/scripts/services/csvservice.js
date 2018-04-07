@@ -11,7 +11,7 @@ angular.module('etherAppApp')
   .service('csvService', function ($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
-    var path = "require('web3')"
+    var path = ""
 
     return {
       get: function() {

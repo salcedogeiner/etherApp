@@ -28,9 +28,9 @@ angular.module('etherAppApp')
         return docs;
       },
       set_doc: function(doc){
-        var some = [web3.toUtf8(doc[0]),web3.toUtf8(doc[1])];
+        //var some = [web3.toUtf8(doc[0]),web3.toUtf8(doc[1])];
 
-        console.log(some);
+        //console.log(some);
         var txnObject = {
           from: web3.eth.coinbase,
           gas: 910000
