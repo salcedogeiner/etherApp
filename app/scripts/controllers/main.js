@@ -19,8 +19,13 @@ angular.module('etherAppApp')
     };
 
     $scope.subirRegistro=function(raw){
-      web3service.get();
-      console.log(raw);
+      var status=web3service.set_doc(raw);
+      raw.upload=status;
+    };
+
+    $scope.obtenerRegistro=function(dato){
+      $scope.busquedareg=web3service.get_doc(dato);
+      console.log(dato,status);
     };
 
 

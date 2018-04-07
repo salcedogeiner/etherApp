@@ -23,13 +23,13 @@
                           </tr>
                           <tr ng-repeat="raw in data.slice(1,-1) track by $index">
                             <td ng-repeat="dat in raw track by $index">{{dat}}</td>
-                            <td><button class="btn btn-info" ng-click="subirRegistro(raw)">Up</button></td>
+                            <td><button class="btn btn-info" ng-click="subirRegistro(raw)">Up {{raw.upload}}</button></td>
                           </tr>
                         </table>
-                        <fieldset>
+                        <!--fieldset>
                             <label>Up all:</label>
                               <input class="btn btn-success" type="button" value="Up" />
-                          </fieldset>
+                          </fieldset-->
                       </section>
             </div>
 
@@ -41,14 +41,18 @@
 
             <fieldset class="form-group">
                 <div class="input-group col-md-10 col-md-offset-1">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="dato">
                     <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit">
+                      <button class="btn btn-default" type="submit" ng-click="obtenerRegistro(dato)">
                         <i class="glyphicon glyphicon-search"></i>
                       </button>
                     </div>
                   </div>
             </fieldset>
+
+            <div class="panel panel-body panel-success">
+              <p ng-show="busquedareg">Resultado: <br />{{busquedareg}}</p>
+            </div>
 
            </div>
           </uib-tabset>
