@@ -1,12 +1,12 @@
 # ether-app
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+Project used ethereum contract making in solidity.
+
 
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
+## Use
+Contract reads array of string and save on blockchain using bytes32 as proposed to management structs
 
-Running `grunt test` will run the unit tests with karma.
